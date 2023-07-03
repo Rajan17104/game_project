@@ -73,12 +73,14 @@ function Game(props) {
         )
 
         console.log(fData);
+
+        setSearch(fData)
     }
 
     return (
         <div className='row' >
             <input type='search' name='search' placeholder='Search...' onChange={(e) => handlechange(e.target.value)}/>
-            <ListGame gdata={data} />
+            <ListGame gdata={search.length > 0 ? search : data} />
         </div>
     );
 
