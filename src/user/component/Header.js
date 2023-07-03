@@ -19,7 +19,9 @@ function Header(props) {
                                 <li><Link to="/shop">Our Shop</Link></li>
                                 <li><Link to="/product">Product Details</Link></li>
                                 <li><Link to="/contact">Contact Us</Link></li>
+                                <li><Link to="/game">Game</Link></li>
                                 <li><Link to="#">Sign In</Link></li>
+
                             </ul>
                             <a className="menu-trigger">
                                 <span>Menu</span>
