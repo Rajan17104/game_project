@@ -17,6 +17,7 @@ import EditIcon from '@mui/icons-material/Edit';
 export default function FormDialog() {
   const [open, setOpen] = React.useState(false);
   const [items, setItems] = React.useState([]);
+  const [update, setUpdate] = React.useState(null);
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -26,7 +27,7 @@ export default function FormDialog() {
     setOpen(false);
   };
 
-  const handleAdd = (data) => {
+  const handleSubmitData = (data) => {
     console.log(data);
 
     let rno = Math.floor(Math.random() * 1000);
@@ -41,12 +42,28 @@ export default function FormDialog() {
       localStorage.setItem("games", JSON.stringify([newData]))
       setItems([newData])
     } else {
-      localData.push(newData)
-      localStorage.setItem("games", JSON.stringify(localData))
-      setItems(localData)
+      if (update) {
+        let uData = localData.map((v) => {
+          if (v.id === data.id) {
+            return data;
+          } else {
+            return v;
+          }
+        })
+        localStorage.setItem("games", JSON.stringify(uData))
+        setItems(uData)
+      } else {
+        localData.push(newData)
+        localStorage.setItem("games", JSON.stringify(localData))
+        setItems(localData)
+      }
+
+
     }
 
     handleClose();
+    setUpdate(null);
+
   };
 
   useEffect(() => {
@@ -84,8 +101,10 @@ export default function FormDialog() {
       desc: ''
     },
     onSubmit: (values, action) => {
-      handleAdd(values)
+
       action.resetForm()
+      handleSubmitData(values)
+
     },
 
   });
@@ -108,6 +127,8 @@ export default function FormDialog() {
     formik.setValues(data);
 
     console.log(data);
+
+    setUpdate(data)
 
   }
 
@@ -162,7 +183,7 @@ export default function FormDialog() {
                 onBlur={handleBlur}
               />
               <span style={{ color: 'red' }}>{errors.name && touched.name ? errors.name : null}  </span>
-    
+
               <TextField
 
                 margin="dense"
@@ -201,7 +222,7 @@ export default function FormDialog() {
             </form>
           </Formik>
         </DialogContent>
-        
+
       </Dialog>
 
       <div style={{ height: 400, width: '100%' }}>
