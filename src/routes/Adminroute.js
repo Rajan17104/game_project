@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from '../admin/Component/Layout'
 import { Route, Routes } from 'react-router-dom';
-import Games from '../admin/Container/Games_';
+import Games from '../admin/Container/Games/Games_';
 
 function Adminroute(props) {
     return (

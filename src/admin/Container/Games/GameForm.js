@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import Dialog from '@mui/material/Dialog';
@@ -8,9 +8,18 @@ import DialogTitle from '@mui/material/DialogTitle';
 import { Formik, useFormik } from 'formik';
 import * as yup from 'yup';
 
-function GameForm(props) {
+function GameForm({onAdd ,onupdate}) {
     
   const [open, setOpen] = React.useState(false);
+
+  useEffect(() => {
+    if(onupdate){
+
+      formik.setValues(onupdate);
+      handleClickOpen()
+
+    }
+  },[onupdate])
 
     const handleClickOpen = () => {
         setOpen(true);
@@ -45,8 +54,10 @@ function GameForm(props) {
       desc: ''
     },
     onSubmit: (values, action) => {
-      handleAdd(values)
+      // handleSubmitData(values)
       action.resetForm()
+      onAdd(values);
+      handleClose();
     },
 
   });
@@ -62,7 +73,6 @@ function GameForm(props) {
             <Dialog open={open} onClose={handleClose}>
                 <DialogTitle>Games</DialogTitle>
                 <DialogContent>
-                    <Formik value={values} >
                         <form onSubmit={handleSubmit}>
                             <TextField
 
@@ -115,7 +125,6 @@ function GameForm(props) {
                                 <Button type='submit' >submit</Button>
                             </DialogActions>
                         </form>
-                    </Formik>
                 </DialogContent>
 
             </Dialog>

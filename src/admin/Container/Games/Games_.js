@@ -1,77 +1,83 @@
 import * as React from 'react';
-import Button from '@mui/material/Button';
-import TextField from '@mui/material/TextField';
-import Dialog from '@mui/material/Dialog';
-import DialogActions from '@mui/material/DialogActions';
-import DialogContent from '@mui/material/DialogContent';
-import DialogTitle from '@mui/material/DialogTitle';
-import { Formik, useFormik } from 'formik';
-import * as yup from 'yup';
 import { DataGrid } from '@mui/x-data-grid';
-import { useEffect } from 'react';
 import IconButton from '@mui/material/IconButton';
 import DeleteIcon from '@mui/icons-material/Delete';
-// import EditIcon from '@mui/icons-material/Edit';
+import EditIcon from '@mui/icons-material/Edit';
 import GameForm from './GameForm';
 
 
 export default function FormDialog() {
 
   const [items, setItems] = React.useState([]);
+  const [update, setUpdate] = React.useState(null);
 
-  const handleAdd = (data) => {
+
+  const handleSubmitData = (data) => {
     console.log(data);
 
     let rno = Math.floor(Math.random() * 1000);
 
     let newData = { id: rno, ...data };
 
-    let localData = JSON.parse(localStorage.getItem("games"));
+    let localdata = JSON.parse(localStorage.getItem("games"));
 
-    console.log(localData);
+    console.log(localdata);
 
-    if (localData === null) {
+    if (localdata === null) {
       localStorage.setItem("games", JSON.stringify([newData]))
       setItems([newData])
     } else {
-      localData.push(newData)
-      localStorage.setItem("games", JSON.stringify(localData))
-      setItems(localData)
+
+      if (update) {
+        let uData = localdata.map((v) => {
+          if (v.id === data.id) {
+            return data
+          } else {
+            return v;
+          }
+        })
+        localStorage.setItem("games", JSON.stringify(uData))
+        setItems(uData)
+        console.log(uData);
+      } else {
+        localdata.push(newData)
+        localStorage.setItem("games", JSON.stringify(localdata))
+        setItems(localdata)
+      }
     }
 
-    handleClose();
-    setItems(null);
+    setUpdate(null);
 
   };
 
-  useEffect(() => {
-    let localData = JSON.parse(localStorage.getItem("games"));
-
-    if (localData !== null) {
-      setItems(localData)
-    }
-
-  }, []);
-
-
   const handleDelete = (id) => {
-    let localData = JSON.parse(localStorage.getItem("games"));
+    let localdata = JSON.parse(localStorage.getItem("games"));
 
-    let fdata = localData.filter((v, i) => v.id !== id)
+    let fdata = localdata.filter((v, i) => v.id !== id)
 
     localStorage.setItem("games", JSON.stringify(fdata))
 
     setItems(fdata)
   }
 
-  // const handleEdit = (data) => {
-  //   setOpen(true);
+  React.useEffect(() => {
+    let localdata = JSON.parse(localStorage.getItem("games"));
 
-  //   formik.setValues(data);
+    if (localdata !== null) {
+      setItems(localdata)
+    }
 
-  //   console.log(data);
+  }, []);
 
-  // }
+
+
+
+  const handleEdit = (data) => {
+
+    setUpdate(data);
+    console.log(data);
+
+  }
 
   const columns = [
 
@@ -89,9 +95,9 @@ export default function FormDialog() {
             <DeleteIcon />
           </IconButton>
 
-          {/* <IconButton aria-label="edit" onClick={() => handleEdit(params.row)}>
+          <IconButton aria-label="edit" onClick={() => handleEdit(params.row)}>
             <EditIcon />
-          </IconButton> */}
+          </IconButton>
         </>
       ),
 
@@ -102,8 +108,8 @@ export default function FormDialog() {
   return (
     <>
 
-    <GameForm />
-      
+      <GameForm onAdd={handleSubmitData} onupdate={update} />
+
       <div style={{ height: 400, width: '100%' }}>
         <DataGrid
           rows={items}
