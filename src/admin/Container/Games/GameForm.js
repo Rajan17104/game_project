@@ -67,8 +67,8 @@ function GameForm({onAdd ,onupdate}) {
     return (
         <>
             <h1>Games</h1>
-            <Button variant="outlined" onClick={handleClickOpen}>
-                Add Games
+            <Button variant="outlined" onClick={handleClickOpen} style={{backgroundColor:'#1976D2' , color:'#fff'}}>
+                Add Games 
             </Button>
             <Dialog open={open} onClose={handleClose}>
                 <DialogTitle>Games</DialogTitle>
