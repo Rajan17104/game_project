@@ -1,6 +1,5 @@
 import React from 'react';
-import CustomCard from '../../UI/CustomCard';
-
+import CustomCard from '../../component/UI/CustomCard'
 function ListGame({ gdata }) {
     return (
 
@@ -13,6 +12,7 @@ function ListGame({ gdata }) {
                         <>
                             < div className='col-md-3 justify-content-between g-3' >
                                 <CustomCard values={v} />
+                                
                             </div >
                         </>
                     )
