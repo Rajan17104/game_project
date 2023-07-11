@@ -1,13 +1,11 @@
 import React from 'react';
 import { CardData } from './card.style';
 
-function Card({children}) {
+function Card({ ...rest }) {
     return (
         <div>
-           <CardData >
-
-           {children}
-           </CardData>
+           <CardData {...rest} />
+     
         </div>
     );
 }

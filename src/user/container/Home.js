@@ -1,6 +1,7 @@
 import React from 'react';
 import { H2, H4, H6 } from '../component/UI/Heading/heading.style';
 import { Title } from '../component/UI/Subtitel/subtitel.style';
+import Card from '../component/UI/Card/Card';
 
 function HOme(props) {
     return (
@@ -92,7 +93,7 @@ function HOme(props) {
                             </div>
                         </div>
                         <div className="col-lg-3 col-md-6">
-                            <div className="item">
+                            <Card className="item">
                                 <div className="thumb">
                                     <a href="product-details.html"><img src="assets/images/trending-01.jpg" alt /></a>
                                     <span className="price"><em>$28</em>$20</span>
@@ -102,10 +103,10 @@ function HOme(props) {
                                     <H4>Assasin Creed</H4>
                                     <a href="product-details.html"><i className="fa fa-shopping-bag" /></a>
                                 </div>
-                            </div>
+                            </Card>
                         </div>
                         <div className="col-lg-3 col-md-6">
-                            <div className="item">
+                            <Card className="item">
                                 <div className="thumb">
                                     <a href="product-details.html"><img src="assets/images/trending-02.jpg" alt /></a>
                                     <span className="price">$44</span>
@@ -115,10 +116,10 @@ function HOme(props) {
                                     <H4>Assasin Creed</H4>
                                     <a href="product-details.html"><i className="fa fa-shopping-bag" /></a>
                                 </div>
-                            </div>
+                            </Card>
                         </div>
                         <div className="col-lg-3 col-md-6">
-                            <div className="item">
+                            <Card className="item">
                                 <div className="thumb">
                                     <a href="product-details.html"><img src="assets/images/trending-03.jpg" alt /></a>
                                     <span className="price"><em>$64</em>$44</span>
@@ -128,10 +129,10 @@ function HOme(props) {
                                     <H4>Assasin Creed</H4>
                                     <a href="product-details.html"><i className="fa fa-shopping-bag" /></a>
                                 </div>
-                            </div>
+                            </Card>
                         </div>
                         <div className="col-lg-3 col-md-6">
-                            <div className="item">
+                            <Card className="item">
                                 <div className="thumb">
                                     <a href="product-details.html"><img src="assets/images/trending-04.jpg" alt /></a>
                                     <span className="price">$32</span>
@@ -141,7 +142,7 @@ function HOme(props) {
                                     <H4>Assasin Creed</H4>
                                     <a href="product-details.html"><i className="fa fa-shopping-bag" /></a>
                                 </div>
-                            </div>
+                            </Card>
                         </div>
                     </div>
                 </div>

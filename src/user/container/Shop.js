@@ -1,5 +1,6 @@
 import React from 'react';
 import { H3, H4 } from '../component/UI/Heading/heading.style';
+import Card from '../component/UI/Card/Card';
 
 function Shop(props) {
     return (
@@ -32,7 +33,7 @@ function Shop(props) {
                     </ul>
                     <div className="row trending-box">
                         <div className="col-lg-3 col-md-6 align-self-center mb-30 trending-items col-md-6 adv">
-                            <div className="item">
+                            <Card className="item">
                                 <div className="thumb">
                                     <a href="product-details.html"><img src="assets/images/trending-01.jpg" alt /></a>
                                     <span className="price"><em>$36</em>$24</span>
@@ -42,10 +43,10 @@ function Shop(props) {
                                     <H4>Assasin Creed</H4>
                                     <a href="product-details.html"><i className="fa fa-shopping-bag" /></a>
                                 </div>
-                            </div>
+                            </Card>
                         </div>
                         <div className="col-lg-3 col-md-6 align-self-center mb-30 trending-items col-md-6 str">
-                            <div className="item">
+                            <Card className="item">
                                 <div className="thumb">
                                     <a href="product-details.html"><img src="assets/images/trending-02.jpg" alt /></a>
                                     <span className="price"><em>$32</em>$22</span>
@@ -55,10 +56,10 @@ function Shop(props) {
                                     <H4>Assasin Creed</H4>
                                     <a href="product-details.html"><i className="fa fa-shopping-bag" /></a>
                                 </div>
-                            </div>
+                            </Card>
                         </div>
                         <div className="col-lg-3 col-md-6 align-self-center mb-30 trending-items col-md-6 adv rac">
-                            <div className="item">
+                            <Card className="item">
                                 <div className="thumb">
                                     <a href="product-details.html"><img src="assets/images/trending-03.jpg" alt /></a>
                                     <span className="price"><em>$45</em>$30</span>
@@ -68,10 +69,10 @@ function Shop(props) {
                                     <H4>Assasin Creed</H4>
                                     <a href="product-details.html"><i className="fa fa-shopping-bag" /></a>
                                 </div>
-                            </div>
+                            </Card>
                         </div>
                         <div className="col-lg-3 col-md-6 align-self-center mb-30 trending-items col-md-6 str">
-                            <div className="item">
+                            <Card className="item">
                                 <div className="thumb">
                                     <a href="product-details.html"><img src="assets/images/trending-04.jpg" alt /></a>
                                     <span className="price"><em>$32</em>$22</span>
@@ -81,10 +82,10 @@ function Shop(props) {
                                     <H4>Assasin Creed</H4>
                                     <a href="product-details.html"><i className="fa fa-shopping-bag" /></a>
                                 </div>
-                            </div>
+                            </Card>
                         </div>
                         <div className="col-lg-3 col-md-6 align-self-center mb-30 trending-items col-md-6 rac str">
-                            <div className="item">
+                            <Card className="item">
                                 <div className="thumb">
                                     <a href="product-details.html"><img src="assets/images/trending-03.jpg" alt /></a>
                                     <span className="price"><em>$38</em>$26</span>
@@ -94,10 +95,10 @@ function Shop(props) {
                                     <H4>Assasin Creed</H4>
                                     <a href="product-details.html"><i className="fa fa-shopping-bag" /></a>
                                 </div>
-                            </div>
+                            </Card>
                         </div>
                         <div className="col-lg-3 col-md-6 align-self-center mb-30 trending-items col-md-6 rac adv">
-                            <div className="item">
+                            <Card className="item">
                                 <div className="thumb">
                                     <a href="product-details.html"><img src="assets/images/trending-01.jpg" alt /></a>
                                     <span className="price"><em>$30</em>$20</span>
@@ -107,10 +108,10 @@ function Shop(props) {
                                     <H4>Assasin Creed</H4>
                                     <a href="product-details.html"><i className="fa fa-shopping-bag" /></a>
                                 </div>
-                            </div>
+                            </Card>
                         </div>
                         <div className="col-lg-3 col-md-6 align-self-center mb-30 trending-items col-md-6 rac str">
-                            <div className="item">
+                            <Card className="item">
                                 <div className="thumb">
                                     <a href="product-details.html"><img src="assets/images/trending-04.jpg" alt /></a>
                                     <span className="price"><em>$32</em>$22</span>
@@ -120,10 +121,10 @@ function Shop(props) {
                                     <H4>Assasin Creed</H4>
                                     <a href="product-details.html"><i className="fa fa-shopping-bag" /></a>
                                 </div>
-                            </div>
+                            </Card>
                         </div>
                         <div className="col-lg-3 col-md-6 align-self-center mb-30 trending-items col-md-6 rac adv">
-                            <div className="item">
+                            <Card className="item">
                                 <div className="thumb">
                                     <a href="product-details.html"><img src="assets/images/trending-02.jpg" alt /></a>
                                     <span className="price"><em>$32</em>$22</span>
@@ -133,10 +134,10 @@ function Shop(props) {
                                     <H4>Assasin Creed</H4>
                                     <a href="product-details.html"><i className="fa fa-shopping-bag" /></a>
                                 </div>
-                            </div>
+                            </Card>
                         </div>
                         <div className="col-lg-3 col-md-6 align-self-center mb-30 trending-items col-md-6 adv rac">
-                            <div className="item">
+                            <Card className="item">
                                 <div className="thumb">
                                     <a href="product-details.html"><img src="assets/images/trending-03.jpg" alt /></a>
                                     <span className="price"><em>$28</em>$20</span>
@@ -146,10 +147,10 @@ function Shop(props) {
                                     <H4>Assasin Creed</H4>
                                     <a href="product-details.html"><i className="fa fa-shopping-bag" /></a>
                                 </div>
-                            </div>
+                            </Card>
                         </div>
                         <div className="col-lg-3 col-md-6 align-self-center mb-30 trending-items col-md-6 str">
-                            <div className="item">
+                            <Card className="item">
                                 <div className="thumb">
                                     <a href="product-details.html"><img src="assets/images/trending-04.jpg" alt /></a>
                                     <span className="price"><em>$26</em>$18</span>
@@ -159,10 +160,10 @@ function Shop(props) {
                                     <H4>Assasin Creed</H4>
                                     <a href="product-details.html"><i className="fa fa-shopping-bag" /></a>
                                 </div>
-                            </div>
+                            </Card>
                         </div>
                         <div className="col-lg-3 col-md-6 align-self-center mb-30 trending-items col-md-6 adv">
-                            <div className="item">
+                            <Card className="item">
                                 <div className="thumb">
                                     <a href="product-details.html"><img src="assets/images/trending-01.jpg" alt /></a>
                                     <span className="price"><em>$32</em>$24</span>
@@ -172,10 +173,10 @@ function Shop(props) {
                                     <H4>Assasin Creed</H4>
                                     <a href="product-details.html"><i className="fa fa-shopping-bag" /></a>
                                 </div>
-                            </div>
+                            </Card>
                         </div>
                         <div className="col-lg-3 col-md-6 align-self-center mb-30 trending-items col-md-6 str">
-                            <div className="item">
+                            <Card className="item">
                                 <div className="thumb">
                                     <a href="product-details.html"><img src="assets/images/trending-02.jpg" alt /></a>
                                     <span className="price"><em>$45</em>$30</span>
@@ -185,7 +186,7 @@ function Shop(props) {
                                     <H4>Assasin Creed</H4>
                                     <a href="product-details.html"><i className="fa fa-shopping-bag" /></a>
                                 </div>
-                            </div>
+                            </Card>
                         </div>
                     </div>
                     <div className="row">
