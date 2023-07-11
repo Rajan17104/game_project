@@ -3,7 +3,7 @@ import { styled } from 'styled-components';
 
 export const Basebutton = styled.button`
 
-background: #007CF8;
+background: #EE626B;
 border: 0;
 padding: 10px 35px;
 
@@ -13,7 +13,8 @@ margin: 10px;
 
 &:hover {
     color: #fff;
-    background: #EE626B;
+   
+    background: #007CF8;
 }
 
 `

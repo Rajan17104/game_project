@@ -1,4 +1,7 @@
 import React from 'react';
+import Button from '../component/UI/Button/Button';
+import { H2, H3, H6 } from '../component/UI/Heading/heading.style';
+import { Title } from '../component/UI/Subtitel/subtitel.style';
 
 function Contact(props) {
     return (
@@ -7,7 +10,7 @@ function Contact(props) {
     <div className="container">
       <div className="row">
         <div className="col-lg-12">
-          <h3>Contact Us</h3>
+          <H3>Contact Us</H3>
           <span className="breadcrumb"><a href="#">Home</a>  &gt;  Contact Us</span>
         </div>
       </div>
@@ -19,10 +22,10 @@ function Contact(props) {
         <div className="col-lg-6 align-self-center">
           <div className="left-text">
             <div className="section-heading">
-              <h6>Contact Us</h6>
-              <h2>Say Hello!</h2>
+              <H6>Contact Us</H6>
+              <H2>Say Hello!</H2>
             </div>
-            <p>LUGX Gaming Template is based on the latest Bootstrap 5 CSS framework. This template is provided by TemplateMo and it is suitable for your gaming shop ecommerce websites. Feel free to use this for any purpose. Thank you.</p>
+            <Title>LUGX Gaming Template is based on the latest Bootstrap 5 CSS framework. This template is provided by TemplateMo and it is suitable for your gaming shop ecommerce websites. Feel free to use this for any purpose. Thank you.</Title>
             <ul>
               <li><span>Address</span> Sunny Isles Beach, FL 33160, United States</li>
               <li><span>Phone</span> +123 456 7890</li>
@@ -68,7 +71,7 @@ function Contact(props) {
                     </div>
                     <div className="col-lg-12">
                       <fieldset>
-                        <button type="submit" id="form-submit" className="orange-button">Send Message Now</button>
+                        <Button type="submit" id="form-submit" className="orange-button">Send Message Now</Button>
                       </fieldset>
                     </div>
                   </div>

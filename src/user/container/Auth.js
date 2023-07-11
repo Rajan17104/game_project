@@ -1,31 +1,12 @@
-// import React from 'react';
-
-// const Sign = () => {
-//     return (
-//         <>
-//             {/* <div className="page-heading header-text">
-//                 <div className="container">
-//                     <div className="row">
-//                         <div className="col-lg-12">
-//                             <h3>Our game</h3>
-//                             <span className="breadcrumb"><a href="#">Home</a> &gt; Our Game</span>
-//                         </div>
-//                     </div>
-//                 </div>
-//             </div> */}
-
-//         </>
-//     );
-// };
-
-// export default Sign;
-
 import { useFormik } from 'formik';
 import React from 'react';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import * as yup from 'yup';
-import Button from '../component/UI/Button';
+import Button from '../component/UI/Button/Button';
+import Input from '../component/UI/InputBox/Input';
+// import { p } from '../component/UI/Subtitel/subtitel.style';
+// import { h2 } from '../component/UI/Heading/heading.style';
 
 function Auth(props) {
 
@@ -109,35 +90,32 @@ function Auth(props) {
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
-              <h3>Our game</h3>
-              <span className="breadcrumb"><a href="#">Home</a> &gt; Our Game</span>
-            </div>  
+              <h3>Game</h3>
+              <span className="breadcrumb"><a href="#">Home</a>  &gt; Game</span>
+            </div>
           </div>
         </div>
       </div>
-
-
       <section id="appointment" className="appointment">
         <div className="container">
           <div className="section-title">
             {
               authType === 'login' ? <h2>Login</h2> :
-                authType === 'sign up' ? <h2>Sign up</h2> : <h2>Reset password</h2>
+                authType === 'sign up' ? <h2>Sign up</h2> : <h2>Reset password</h2  >
             }
 
-            {/* <p>Aenean enim orci, suscipit vitae sodales ac, semper in ex. Nunc aliquam eget nibh eu euismod. Donec dapibus
-            blandit quam volutpat sollicitudin. Fusce tincidunt sit amet ex in volutpat. Donec lacinia finibus tortor.
-            Curabitur luctus eleifend odio. Phasellus placerat mi et suscipit pulvinar.</p> */}
+            <p>Aenean enim orci, suscipit vitae sodales ac, semper in ex. Nunc aliquam eget nibh eu euismod. Donec dapibus
+              blandit quam volutpat sollicitudin. Fusce tincidunt sit amet ex in volutpat. Donec lacinia finibus tortor.
+              Curabitur luctus eleifend odio. Phasellus placerat mi et suscipit pulvinar.</p>
           </div>
           <form onSubmit={handleSubmit} className="php-email-form">
             <div className="row justify-content-center" >
               {
                 authType === 'login' || authType === 'forgot' ? null :
                   <div className="col-md-7 form-group">
-                    <input
+                    <Input
                       type="text"
                       name="name"
-                      className="form-control"
                       id="name"
                       placeholder="Your Name"
                       data-rule="minlen:4"
@@ -145,17 +123,17 @@ function Auth(props) {
                       value={values.name}
                       onChange={handleChange}
                       onBlur={handleBlur}
+                      errorText={errors.name && touched.name ? errors.name : ''}
                     />
-                    <span style={{ color: 'red' }}>{errors.name && touched.name ? errors.name : null}</span>
+                    {/* <span style={{ color: 'red' }}>{errors.name && touched.name ? errors.name : null}</span> */}
                     <div className="validate" />
                   </div>
 
               }
 
               <div className="col-md-7 form-group mt-3 mt-md-0">
-                <input
+                <Input
                   type="email"
-                  className="form-control"
                   name="email"
                   id="email"
                   placeholder="Your Email"
@@ -164,8 +142,9 @@ function Auth(props) {
                   value={values.email}
                   onChange={handleChange}
                   onBlur={handleBlur}
+                  errorText={errors.email && touched.email ? errors.email : ''}
                 />
-                <span style={{ color: 'red' }}>{errors.email && touched.email ? errors.email : null}</span>
+                {/* <span style={{ color: 'red' }}>{errors.email && touched.email ? errors.email : null}</span> */}
 
                 <div className="validate" />
               </div>
@@ -173,9 +152,8 @@ function Auth(props) {
               {
                 authType !== 'forgot' ?
                   <div className="col-md-7 form-group mt-3 mt-md-0">
-                    <input
+                    <Input
                       type="password"
-                      className="form-control"
                       name="password"
                       id="password"
                       placeholder="Your password"
@@ -184,8 +162,9 @@ function Auth(props) {
                       value={values.password}
                       onChange={handleChange}
                       onBlur={handleBlur}
+                      errorText={errors.password && touched.password ? errors.password : ''}
                     />
-                    <span style={{ color: 'red' }}>{errors.password && touched.password ? errors.password : null}</span>
+                    {/* <span style={{ color: 'red' }}>{errors.password && touched.password ? errors.password : null}</span> */}
                     <div className="validate" />
                   </div> : null
               }
@@ -194,10 +173,10 @@ function Auth(props) {
 
             {
               authType === 'login' ?
-                <div className="text-center"><Button>Login</Button></div> :
+                <div className="text-center"><Button type='primary' >Login</Button></div> :
                 authType === 'sign up' ?
-                  <div className="text-center"><Button>Sign up</Button></div> :
-                  <div className="text-center"><Button>Submit</Button></div>
+                  <div className="text-center"><Button type='secondary' btndisable={true}>Sign up</Button></div> :
+                  <div className="text-center"><Button type='outline' >Submit</Button></div>
             }
 
           </form>
@@ -213,13 +192,13 @@ function Auth(props) {
               </div>
             </> :
             <div className='text-center'>
-              <span>Creat new account<a href="#" onClick={() => setAuthType('login')}>  Login </a> </span>
+              <span>Creat new account<a href="#" onClick={() => setAuthType('login')}>  Login </a></span>
             </div>
         }<br /><br />
 
       </section>
-
     </>
+
   );
 }
 

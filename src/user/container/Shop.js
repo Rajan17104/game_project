@@ -1,4 +1,5 @@
 import React from 'react';
+import { H3, H4 } from '../component/UI/Heading/heading.style';
 
 function Shop(props) {
     return (
@@ -7,7 +8,7 @@ function Shop(props) {
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-12">
-                            <h3>Our Shop</h3>
+                            <H3>Our Shop</H3>
                             <span className="breadcrumb"><a href="#">Home</a> &gt; Our Shop</span>
                         </div>
                     </div>
@@ -38,7 +39,7 @@ function Shop(props) {
                                 </div>
                                 <div className="down-content">
                                     <span className="category">Action</span>
-                                    <h4>Assasin Creed</h4>
+                                    <H4>Assasin Creed</H4>
                                     <a href="product-details.html"><i className="fa fa-shopping-bag" /></a>
                                 </div>
                             </div>
@@ -51,7 +52,7 @@ function Shop(props) {
                                 </div>
                                 <div className="down-content">
                                     <span className="category">Action</span>
-                                    <h4>Assasin Creed</h4>
+                                    <H4>Assasin Creed</H4>
                                     <a href="product-details.html"><i className="fa fa-shopping-bag" /></a>
                                 </div>
                             </div>
@@ -64,7 +65,7 @@ function Shop(props) {
                                 </div>
                                 <div className="down-content">
                                     <span className="category">Action</span>
-                                    <h4>Assasin Creed</h4>
+                                    <H4>Assasin Creed</H4>
                                     <a href="product-details.html"><i className="fa fa-shopping-bag" /></a>
                                 </div>
                             </div>
@@ -77,7 +78,7 @@ function Shop(props) {
                                 </div>
                                 <div className="down-content">
                                     <span className="category">Action</span>
-                                    <h4>Assasin Creed</h4>
+                                    <H4>Assasin Creed</H4>
                                     <a href="product-details.html"><i className="fa fa-shopping-bag" /></a>
                                 </div>
                             </div>
@@ -90,7 +91,7 @@ function Shop(props) {
                                 </div>
                                 <div className="down-content">
                                     <span className="category">Action</span>
-                                    <h4>Assasin Creed</h4>
+                                    <H4>Assasin Creed</H4>
                                     <a href="product-details.html"><i className="fa fa-shopping-bag" /></a>
                                 </div>
                             </div>
@@ -103,7 +104,7 @@ function Shop(props) {
                                 </div>
                                 <div className="down-content">
                                     <span className="category">Action</span>
-                                    <h4>Assasin Creed</h4>
+                                    <H4>Assasin Creed</H4>
                                     <a href="product-details.html"><i className="fa fa-shopping-bag" /></a>
                                 </div>
                             </div>
@@ -116,7 +117,7 @@ function Shop(props) {
                                 </div>
                                 <div className="down-content">
                                     <span className="category">Action</span>
-                                    <h4>Assasin Creed</h4>
+                                    <H4>Assasin Creed</H4>
                                     <a href="product-details.html"><i className="fa fa-shopping-bag" /></a>
                                 </div>
                             </div>
@@ -129,7 +130,7 @@ function Shop(props) {
                                 </div>
                                 <div className="down-content">
                                     <span className="category">Action</span>
-                                    <h4>Assasin Creed</h4>
+                                    <H4>Assasin Creed</H4>
                                     <a href="product-details.html"><i className="fa fa-shopping-bag" /></a>
                                 </div>
                             </div>
@@ -142,7 +143,7 @@ function Shop(props) {
                                 </div>
                                 <div className="down-content">
                                     <span className="category">Action</span>
-                                    <h4>Assasin Creed</h4>
+                                    <H4>Assasin Creed</H4>
                                     <a href="product-details.html"><i className="fa fa-shopping-bag" /></a>
                                 </div>
                             </div>
@@ -155,7 +156,7 @@ function Shop(props) {
                                 </div>
                                 <div className="down-content">
                                     <span className="category">Action</span>
-                                    <h4>Assasin Creed</h4>
+                                    <H4>Assasin Creed</H4>
                                     <a href="product-details.html"><i className="fa fa-shopping-bag" /></a>
                                 </div>
                             </div>
@@ -168,7 +169,7 @@ function Shop(props) {
                                 </div>
                                 <div className="down-content">
                                     <span className="category">Action</span>
-                                    <h4>Assasin Creed</h4>
+                                    <H4>Assasin Creed</H4>
                                     <a href="product-details.html"><i className="fa fa-shopping-bag" /></a>
                                 </div>
                             </div>
@@ -181,7 +182,7 @@ function Shop(props) {
                                 </div>
                                 <div className="down-content">
                                     <span className="category">Action</span>
-                                    <h4>Assasin Creed</h4>
+                                    <H4>Assasin Creed</H4>
                                     <a href="product-details.html"><i className="fa fa-shopping-bag" /></a>
                                 </div>
                             </div>
