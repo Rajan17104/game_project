@@ -11,7 +11,7 @@ function Input({ errorText, ...rest }) {
         </InputError>
 
        </>
-    );  
+    );      
 }
 
 export default Input;
