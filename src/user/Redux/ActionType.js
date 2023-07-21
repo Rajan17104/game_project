@@ -1,4 +1,10 @@
 
 export const INCREMENT_COUNTER = "INCREMENT_COUNTER"
-
 export const DECREMENT_COUNTER = "DECREMENT_COUNTER"
+
+export const GET_TEAM = "GET_TEAM"
+export const ADD_TEAM = "ADD_TEAM"
+export const DELETE_TEAM = "DELETE_TEAM"
+export const UPDATE_TEAM = "UPDATE_TEAM"
+export const LOADING_TEAM = "LOADING_TEAM"
+export const ERROR_TEAM = "ERROR_TEAM"

@@ -1,0 +1,46 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "Game": [
+    {
+      "id": 101,
+      "name": "pubg",
+      "expirence": 100
+    },
+    {
+      "id": 102,
+      "name": "Free fire",
+      "expirence": 200
+    },
+    {
+      "id": 103,
+      "name": "cod",
+      "expirence": 300
+    },
+    {
+      "id": 104,
+      "name": "coc",
+      "expirence": 400
+    },
+    {
+      "name": "rajan",
+      "expirence": "500",
+      "id": 105
+    }
+  ]
+}

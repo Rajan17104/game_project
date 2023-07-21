@@ -3,6 +3,7 @@ import Layout from '../admin/Component/Layout'
 import { Route, Routes } from 'react-router-dom';
 import Games from '../admin/Container/Games/Games_';
 import Dashboard from '../admin/Container/Dashboard/Dashboard';
+import Team from '../admin/Container/Team/Team';
 
 function Adminroute(props) {
     return (
@@ -10,6 +11,7 @@ function Adminroute(props) {
             <Routes>
                 <Route path='/' element={<Dashboard />} />
                 <Route path='/games' element={<Games />} />
+                <Route path='/team' element={<Team />} />
             </Routes>
         </Layout>
     );

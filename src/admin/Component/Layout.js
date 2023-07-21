@@ -18,6 +18,8 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
 import { Link } from 'react-router-dom';
+import GroupsIcon from '@mui/icons-material/Groups';
+
 const drawerWidth = 240;
 
 const openedMixin = (theme) => ({
@@ -86,7 +88,8 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 );
 
 const listdata = [
-    { lable: 'Games', icon: <SportsEsportsIcon />, to: '/admin/games' }
+    { lable: 'Games', icon: <SportsEsportsIcon />, to: '/admin/games' },
+    { lable: 'Team', icon: <GroupsIcon />, to: '/admin/team' }
 ]
 
 export default function Layout({ children }) {
