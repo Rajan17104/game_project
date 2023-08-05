@@ -6,6 +6,7 @@ import Adminroute from './routes/Adminroute';
 import PrivateRoute from './routes/PrivateRoute';
 import { Provider } from 'react-redux';
 import { configureStore } from './user/Redux/Store';
+import { ThemeProvider } from './Context/ContextTheme';
 
 function App() {
 
@@ -13,14 +14,16 @@ function App() {
 
   return (
     <Provider store={store}>
-      <Routes>
-        <Route path='/*' element={<Userroute />} />
+      <ThemeProvider>
+        <Routes>
+          <Route path='/*' element={<Userroute />} />
 
-        <Route element={<PrivateRoute />}>
-          <Route path='/admin/*' element={<Adminroute />} />
-        </Route>
+          <Route element={<PrivateRoute />}>
+            <Route path='/admin/*' element={<Adminroute />} />
+          </Route>
 
-      </Routes>
+        </Routes>
+      </ThemeProvider>
     </Provider>
   );
 }

@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { ThemeContext } from '../../Context/ContextTheme';
+
 
 function Header(props) {
+
+    let theme = useContext(ThemeContext)
+    console.log(theme);
+
     return (
         <header className="header-area header-sticky">
-            <div className="container">
+            <div className={`container ${theme.theme}`}>
                 <div className="row">
                     <div className="col-12">
                         <nav className="main-nav">
@@ -20,11 +26,15 @@ function Header(props) {
                                 <li><Link to="/product">Product Details</Link></li>
                                 <li><Link to="/contact">Contact Us</Link></li>
                                 <li><Link to="/game">Game</Link></li>
-                                
                                 <li><Link to="/counter">Counter</Link></li>
                                 <li><Link to="/auth">Sign In</Link></li>
 
                             </ul>
+
+                            {/* <button onClick={() => theme.themeToggle(theme.theme)}>Toggle</button> */}
+                            <button onClick={() => theme.themeToggle(theme.theme)}>Toggle</button>
+
+
                             <a className="menu-trigger">
                                 <span>Menu</span>
                             </a>

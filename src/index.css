@@ -35,3 +35,13 @@ h2{
   border-radius: 0.25rem;
   transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
+
+.dark{
+  color: #fff !important;
+  background-color: #000 !important;
+}
+
+.light{
+  color: #000 !important;
+  /* background-color: #fff;   */
+}

@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { H2, H4, H6 } from '../component/UI/Heading/heading.style';
 import { Title } from '../component/UI/Subtitel/subtitel.style';
 import Card from '../component/UI/Card/Card';
+import { ThemeContext } from '../../Context/ContextTheme';
 
 function HOme(props) {
+let theme = useContext(ThemeContext)
+
     return (
-        <div>
+        <div className={`${theme.theme}`}>
             <div className="main-banner">
                 <div className="container">
                     <div className="row">
