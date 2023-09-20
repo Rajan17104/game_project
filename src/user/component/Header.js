@@ -21,7 +21,7 @@ function Header(props) {
                                 <li><Link to="/contact">Contact Us</Link></li>
                                 <li><Link to="/game">Game</Link></li>
                                 
-                                <li><Link to="/counter">Counter</Link></li>
+                                {/* <li><Link to="/counter">Counter</Link></li> */}
                                 <li><Link to="/auth">Sign In</Link></li>
 
                             </ul>
